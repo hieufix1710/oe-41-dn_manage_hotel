@@ -7,7 +7,10 @@
 # Ignore bundler config.
 /.bundle
 /vendor/*
+<<<<<<< HEAD
 
+=======
+>>>>>>> show booked customer
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*

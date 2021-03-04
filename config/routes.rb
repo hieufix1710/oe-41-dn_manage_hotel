@@ -18,5 +18,7 @@ Rails.application.routes.draw do
        root to: "dashboards#index"
        get "/rooms", to: "rooms#show"
     end
+    get "/user/booked", to: "bookings#index"
+    post "/user/booked", to: "bookings#cancel_booked"
   end
 end

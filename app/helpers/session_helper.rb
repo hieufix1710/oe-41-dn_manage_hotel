@@ -28,7 +28,7 @@ module SessionHelper
     @current_user = nil
   end
 
-   def store_location
+  def store_location
     session[:forwarding_url] =
     request.original_url if request.get?
   end
@@ -37,5 +37,8 @@ module SessionHelper
     redirect_to(session[:forwarding_url] ||
       default)
     session.delete(:forwarding_url)
+  end
+  def format_date date
+    date.strftime("%d/%m/%Y")
   end
 end
