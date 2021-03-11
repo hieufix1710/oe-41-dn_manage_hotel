@@ -64,3 +64,8 @@ en:
   error_booked: "Booked not found"
   admin_page: "Admin page"
   error_cancel: "Cancel fail"
+  update_success: "Update success"
+  edit_profile: "Edit profile"
+  about: "About"
+  update: "Update"
+  create_new_room: "Create new room"
