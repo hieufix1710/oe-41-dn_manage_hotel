@@ -16,6 +16,9 @@ Rails.application.routes.draw do
     resources :rooms do
         resources :bookings
     end
+    get "/user/profile", to: "users#show"
+    get "/user/profile/edit", to: "users#edit"
+    patch "/user/profile/edit", to: "users#update"
     namespace :admin do
        root to: "rooms#show"
        get "/rooms", to: "rooms#index"
