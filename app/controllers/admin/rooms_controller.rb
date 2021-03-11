@@ -58,12 +58,12 @@ class Admin::RoomsController < Admin::AdminController
     @room = Room.find_by id: params[:id]
   end
 
-  def load_room_types
-    @room_types = RoomType.all
-  end
-
   def room_params
     params.require(:room).permit(:name,
                                  :image, :price, :description, :room_type_id)
+  end
+
+  def load_room_types
+    @room_types = RoomType.all
   end
 end
