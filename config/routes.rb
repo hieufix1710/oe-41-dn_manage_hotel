@@ -12,5 +12,11 @@ Rails.application.routes.draw do
     end
     get "static_pages/about"
     get "static_pages/gallery"
+    get "/profile", to: "users#profile"
+    get "users/edit", to: "users#edit"
+    namespace :admin do
+       root to: "dashboards#index"
+       get "/rooms", to: "rooms#show"
+    end
   end
 end
