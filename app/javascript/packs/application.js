@@ -20,7 +20,7 @@ document.addEventListener("turbolinks:load", function() {
 
 
 Rails.start()
-Turbolinks.start()
+//Turbolinks.start()
 ActiveStorage.start()
 
 
