@@ -1,5 +1,4 @@
 
-
 const x = new Date().getFullYear();
 let date = document.getElementById('date');
 date.innerHTML = '&copy; ' + x + date.innerHTML;
@@ -168,7 +167,7 @@ setTimeout(function() {
   });
 });
 
-  $(document).ready(function() {
+$(document).ready(function() {
 
 // Javascript method's body can be found in assets/js/demos.js
 md.initDashboardPageCharts();

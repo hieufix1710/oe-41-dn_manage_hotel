@@ -59,7 +59,7 @@
                     </a>
                   </li>
                   <% if logged_in? %>
-                  <li>
+                    <li>
                     <div class="main-menu  d-none d-lg-block">
                       <nav>
                         <ul id="navigation">
@@ -75,6 +75,9 @@
                                   <%= link_to t("admin_page"), admin_root_path%>
                                 </li>
                               <% end %>
+                              <li><%= link_to t("profile"), root_path %></li>
+                              <li><%= link_to t("booked"), root_path %></li>
+                              <li><%= link_to t("logout"), logout_path %></li>
                             </ul>
                           </li>
                         </ul>
