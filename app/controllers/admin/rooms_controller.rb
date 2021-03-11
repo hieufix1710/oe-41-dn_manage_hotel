@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Admin::RoomsController < Admin::AdminController
+<<<<<<< HEAD
     before_action :load_room_type, only: %i(new)
   def new; end
 
@@ -15,11 +16,14 @@ class Admin::RoomsController < Admin::AdminController
     end
   end
 
+=======
+>>>>>>> admin-design
   def show
     @room_ids = Booking.room_ids_in_booking
     @temp = Room.rooms_booking @room_ids
     @rooms = @temp.paginate(page: params[:page]).per_page(Settings.paging_limit)
   end
+<<<<<<< HEAD
 
   def room_params
     params.require(:room).permit(:name,
@@ -31,4 +35,6 @@ class Admin::RoomsController < Admin::AdminController
   def load_room_type
     @room_type = RoomType.all
   end
+=======
+>>>>>>> admin-design
 end

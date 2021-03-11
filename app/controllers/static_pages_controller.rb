@@ -7,14 +7,13 @@ class StaticPagesController < ApplicationController
   def show_rooms
     date_end = params[:date_end].to_date
     date_start = params[:date_start].to_date
-    if date_end >= date_start
-      if date_end < @current_date || date_start < @current_date
-        alert_message_and_redirect_to_rooms
-      end
-      search params[:date_start], params[:date_end]
-    elsif date_end < date_start
-      alert_message_and_redirect_to_rooms
+    if date_end <= date_start && (date_end >= @current_date && date_start >=
+      @current_date)
+      return search params[:date_start], params[:date_end]
+
     end
+
+    alert_message_and_redirect_to_rooms
   end
 
   private

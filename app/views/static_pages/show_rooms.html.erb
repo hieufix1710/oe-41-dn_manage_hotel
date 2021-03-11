@@ -28,7 +28,7 @@
             <h3>Up to 35% savings on Club <br>rooms and Suites</h3>
             <ul>
               <li><%= r.name %></li>
-              <li><%= r.price %></li>
+              <li><%= number_to_currency(r.price) %></li>
               <li><%= r.description %></li>
               <li>Sea view side</li>
             </ul>

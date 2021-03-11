@@ -5,6 +5,8 @@ class Admin::AdminController < ApplicationController
 
   before_action :require_admin
 
+  private
+
   def require_admin
     check_admin
   end

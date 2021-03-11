@@ -20,5 +20,8 @@ Rails.application.routes.draw do
     end
     get "/user/booked", to: "bookings#index"
     post "/user/booked", to: "bookings#cancel_booked"
+    namespace :admin do
+       root to: "rooms#show"
+    end
   end
 end

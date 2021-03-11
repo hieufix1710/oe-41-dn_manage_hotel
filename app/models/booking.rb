@@ -53,6 +53,7 @@ class Booking < ApplicationRecord
 
   scope :room_ids_in_booking, (lambda do
     select("room_id")
-    .where("deleted=0")
+    .where(deleted: 0)
+    .order(id: :desc)
   end)
 end
