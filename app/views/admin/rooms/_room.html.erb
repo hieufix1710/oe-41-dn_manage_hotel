@@ -44,8 +44,8 @@
           <%= r.description %>
         </td>
         <td class="text-primary">
-          <%= link_to "edit", admin_rooms_edit_path(id: r.id) , class: "btn btn-warning" %>
-          <%= link_to "delete", admin_rooms_delete_path(id: r.id), class: "btn btn-danger" %>
+          <%= link_to "", admin_rooms_delete_path(id: r.id), class: "fa fa-trash delete" %> |
+          <%= link_to "", admin_rooms_edit_path(id: r.id), class: "fa fa-pencil" %>
        </td>
      </tr>
    <% end %>

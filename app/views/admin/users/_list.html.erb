@@ -1,0 +1,62 @@
+<table class="table">
+  <thead class=" text-primary">
+    <th>
+      <%= t "name" %>
+    </th>
+    <th>
+       <%= t "email" %>
+    </th>
+    <th>
+       <%= t "birthday" %>
+    </th>
+    <th>
+       <%= t "address" %>
+    </th>
+    <th>
+       <%= t "role" %>
+    </th>
+    <th>
+       <%= t "status" %>
+    </th>
+    <th>
+      Chage Role
+    </th>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td>
+          <%= user.name %>
+        </td>
+        <td>
+          <%= user.email %>
+        </td>
+        <td>
+          <%= user.birthday %>
+        </td>
+        <td>
+          <%= user.address %>
+        </td>
+        <td>
+          <%= user.role %>
+        </td>
+        <td>
+          <%=  user.deleted %>
+        </td>
+        <td class="text-primary">
+         <!-- Button trigger modal -->
+         <% if @check %>
+       <%= link_to "update", admin_users_edit_path ,class: "btn btn-primary" %>
+       <% else %>
+        <%= form_tag admin_users_update_path(id: user.id) do %>
+           <%= select_tag(:role, options_for_select(@roles.map{|role|  role}))%>  </div>
+           <%= submit_tag t("change"), class: "btn btn-warning" %>
+       <% end %>
+       <% end %>
+
+
+       </td>
+     </tr>
+   <% end %>
+ </tbody>
+</table>

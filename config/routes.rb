@@ -17,6 +17,7 @@ Rails.application.routes.draw do
         resources :bookings
     end
     get "/user/profile", to: "users#show"
+    post "/user/booked", to: "bookings#cancel_booked"
     get "/user/profile/edit", to: "users#edit"
     patch "/user/profile/edit", to: "users#update"
     namespace :admin do
@@ -27,5 +28,10 @@ Rails.application.routes.draw do
        get "/rooms/edit", to: "rooms#edit"
        post "/rooms/edit", to: "rooms#update"
        get "/rooms/delete", to: "rooms#destroy"
+       get "/users", to: "users#show"
+       get "/users/edit", to: "users#edit"
+       post "/users/update", to: "users#update"
+       get "/users/permission", to: "users#change"
     end
+end
 end

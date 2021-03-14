@@ -2,7 +2,6 @@
 
 class UsersController < ApplicationController
   before_action :load_user
-  before_action :check_edit, only: %i(profile update)
 
   def new
     @user = User.new
@@ -34,16 +33,14 @@ class UsersController < ApplicationController
     render :show
   end
 
-  def show; end
+  def show
+    @check = true
+  end
 
   private
 
   def load_user
     @user = current_user
-  end
-
-  def check_edit
-    @check = true
   end
 
   def user_params

@@ -5,7 +5,7 @@ class Admin::RoomsController < Admin::AdminController
   before_action :load_room, only: %i(edit update destroy)
 
   def new
-    @room=  Room.new
+    @room = Room.new
   end
 
   def create
@@ -34,21 +34,20 @@ class Admin::RoomsController < Admin::AdminController
       flash[:success] = t "deleted"
       redirect_to admin_root_path
     else
-       flash[:warning] = t "room_not_found"
-       redirect_to admin_root_path
+      flash[:warning] = t "room_not_found"
+      redirect_to admin_root_path
      end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @room.update(room_params)
       flash[:success] = t "updated"
       redirect_to admin_root_path
     else
-       flash.now[:warning] = t "sowething_was_wrong_in_form"
-       reder :edit
+      flash.now[:warning] = t "sowething_was_wrong_in_form"
+      reder :edit
      end
   end
 
