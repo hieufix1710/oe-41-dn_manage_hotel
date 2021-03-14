@@ -1,5 +1,5 @@
-<% provide(:button_text, t("create_new_room")) %>
-<%=form_for :room do |f|%>
+<% provide(:button_text, t("update")) %>
+<%=form_for :room, url:  admin_rooms_edit_path(id: @room.id) do |f|%>
   <div class="form-group">
     <label for="exampleInputEmail1"><%= t "room_name" %> </label>
     <%= f.text_field :name, class: "form-control" %>

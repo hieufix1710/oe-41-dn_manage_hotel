@@ -8,5 +8,5 @@ class Room < ApplicationRecord
 
   scope :rooms, ->(value){where("id not in (?)", value)}
 
-  scope :rooms_booking, ->(value){where("id in (?)", value)}
+  scope :rooms_booking, ->(value){where("id in (?) and deleted = 0", value)}
 end

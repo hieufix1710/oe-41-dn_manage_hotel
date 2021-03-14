@@ -7,7 +7,6 @@ import "bootstrap"
 import "jquery"
 import "popper.js"
 import "packs/main.js"
->>>>>>> admin-design
 import "../stylesheets/application.scss";
 
 
