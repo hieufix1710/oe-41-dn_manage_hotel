@@ -9,8 +9,6 @@ Rails.application.routes.draw do
     get "/static_pages/rooms", to: "static_pages#show_rooms"
     get "static_pages/about"
     get "static_pages/gallery"
-    get "/profile", to: "users#profile"
-    get "users/edit", to: "users#edit"
     get "/user/booked", to: "bookings#index"
     delete "/booked", to: "bookings#cancel_booked"
     resources :rooms do

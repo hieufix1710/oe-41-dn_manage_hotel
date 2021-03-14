@@ -15,15 +15,10 @@
  *= require toastr
  *= require bootstrap
  *= require rooms
-
  */
  .login-regis{
   color: #fff !important;
   font-weight: 600
-}
-
- .card{
-  height: auto!important;
 }
 
  .card{

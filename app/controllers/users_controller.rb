@@ -17,6 +17,7 @@ class UsersController < ApplicationController
     end
   end
 
+
   def update
     if @user.update(user_params)
       @check = true

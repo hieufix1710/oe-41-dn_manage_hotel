@@ -36,20 +36,6 @@ en:
   created_success: "Create success"
   created_failed: "Create failed"
   booking_date_exist: "Booking date exist"
-  activerecord:
-    attributes:
-      user:
-        role:
-          customer: "Customer"
-          Admin: "Admin"
-          Staff: "Staff"
-  users_management: "User management"
-  search_for: "Search for:"
-  search: "Search"
-  dashboard: "Dashboard"
-  admin: "Admin"
-  customer: "Customer"
-  staff: "Staff"
   booked: "Booked"
   user_name: "User name"
   room: "Room"
@@ -72,7 +58,6 @@ en:
   admin: "Admin"
   customer: "Customer"
   staff: "Staff"
-  sowething_was_wrong_in_form: "Some thing was wrong in form"
   sure_cancel: "Are you sure cancel this booking"
   cancelled: "This booking is cancelled"
   error_booked: "Booked not found"
