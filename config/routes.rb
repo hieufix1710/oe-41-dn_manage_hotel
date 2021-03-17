@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     resource :users
     get "/signup", to: "users#new"
     post "/signup", to: "users#create"
+    get "/login", to: "sessions#new"
+    post "/login", to: "sessions#create"
     namespace :admin do
     end
   end
