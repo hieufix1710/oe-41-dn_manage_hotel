@@ -68,3 +68,4 @@ yarn-debug.log*
 #custom
 .framgia-ci.yml
 /config/database.yml
+.idea
